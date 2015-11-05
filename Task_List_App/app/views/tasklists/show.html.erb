@@ -12,8 +12,8 @@
 <h2> Current Tasks </h2>
 
 <ul>
-  <% @tasklist.tasks.each do | book | %>
-    <li><%= book.title %>
+  <% @tasklist.tasks.each do | task | %>
+    <li><%= task.title %></li>
   <% end %>
 </ul>
 
