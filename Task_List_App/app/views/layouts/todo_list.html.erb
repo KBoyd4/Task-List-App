@@ -1,0 +1,24 @@
+<%= stylesheet_link_tag "site" %>
+
+<html>
+<header>
+<p>ToDo List</p>
+</header>
+<body>
+<div id='primary'>
+Name: <%= params[:id] %>
+</div>
+
+<div id ='sidebar'>
+<ul>
+<% @all_task_lists.each do |task| %>
+	<tr><%= link_to task.name, task %></tr>
+	<br>
+	<% end %>
+	
+</ul>
+</div>
+
+</body>
+<%= params %>
+</html>
