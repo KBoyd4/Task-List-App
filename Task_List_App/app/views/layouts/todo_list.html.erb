@@ -1,24 +1,28 @@
-<%= stylesheet_link_tag "site" %>
-
+<!DOCTYPE html>
 <html>
+<head>
+  <title>TaskListApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+
 <header>
-<p>ToDo List</p>
+  <h1>ToDo List</h1>
 </header>
+
+
 <body>
-<div id='primary'>
-Name: <%= params[:id] %>
+
+<div id ="primary">
+  <%= yield %>
 </div>
 
-<div id ='sidebar'>
-<ul>
-<% @all_task_lists.each do |task| %>
-	<tr><%= link_to task.name, task %></tr>
-	<br>
-	<% end %>
-	
-</ul>
+<div id="sidebar">
+  <%= render 'layouts/sidebar' %>
 </div>
+
+<%= render 'layouts/footer' %>
+
 
 </body>
-<%= params %>
 </html>

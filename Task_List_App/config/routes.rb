@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'todo_list/index'
+
   resources :tasks
 
   resources :tasklists

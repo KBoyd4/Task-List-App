@@ -1,5 +1,5 @@
 class TasklistsController < ApplicationController
-  before_action :set_tasklist, only: [:show, :edit, :update, :destroy]
+  before_action :set_tasklist, only: [:show, :edit, :update, :destroy, :_show]
 
   # GET /tasklists
   # GET /tasklists.json
@@ -10,6 +10,9 @@ class TasklistsController < ApplicationController
   # GET /tasklists/1
   # GET /tasklists/1.json
   def show
+  end
+  
+  def _show
   end
 
   # GET /tasklists/new

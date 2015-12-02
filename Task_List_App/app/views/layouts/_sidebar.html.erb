@@ -1,0 +1,7 @@
+<ul>
+      <% @all_task_lists.each do | tasklist | %>
+        <li><%= link_to tasklist.name, controller: "todo_list", :id => tasklist.id %></li>
+      <% end %>
+</ul>
+
+<%= link_to 'New Task', new_task_path %>
