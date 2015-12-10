@@ -1,0 +1,7 @@
+<h1> These are your tasks </h1>
+
+<ul>
+<% @active_user.tasks.each do | task | %>
+<li> <%= task.title %> </li>
+<% end %>
+</ul>
